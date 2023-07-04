@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundsetter"
+    tools:context=".Activities.mainscreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Chats"
+        app:logo="@drawable/baseline_chat_24"
+        app:logoDescription="chatlogo"
+        android:paddingLeft="10dp"
+        android:id="@+id/toolbar"
+        android:background="?attr/colorPrimary">
+
+
+
+<!--   <TextView-->
+<!--       android:layout_width="wrap_content"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:layout_gravity="end"-->
+<!--       android:textAlignment="textEnd"-->
+<!--       android:text="All messages will be deleted at 12:00 am"-->
+
+<!--       android:textStyle="italic"/>-->
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/serach_bar_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+
+        android:background="@drawable/search_view"
+        android:backgroundTint="@color/backgroundsetter"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search User Here..." />
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/framelayout"
+    android:layout_below="@+id/serach_bar_user"
+    android:layout_above="@id/bottom_navigation">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+       android:scrollbars="vertical"
+          android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbarSize="3dp"
+        android:id="@+id/recyclerview_main"/>
+</FrameLayout>
+
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:menu="@menu/menu_up"
+    app:labelVisibilityMode="labeled"
+
+    android:id="@+id/bottom_navigation"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_mainscreen"
+        android:visibility="gone"/>
+</RelativeLayout>

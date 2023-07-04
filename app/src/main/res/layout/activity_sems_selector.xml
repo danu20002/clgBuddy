@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.sems_selector">
+<androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ android:background="@color/danu_color"
+    app:title="Hello Buddy"
+    android:id="@+id/toolbab">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this name"
+        android:id="@+id/pdfname"
+        android:textSize="13sp"
+        android:layout_gravity="end"/>
+</androidx.appcompat.widget.Toolbar>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbab"
+        android:isScrollContainer="true"
+        android:id="@+id/webview"/>
+
+</RelativeLayout>

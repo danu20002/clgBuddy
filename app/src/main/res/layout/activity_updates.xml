@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundsetter"
+    tools:context=".Activities.Updates">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_updates"
+            android:background="?attr/colorPrimary"
+
+            app:title="Updates">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+               android:text="ongoing updates"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/textview_ongoing"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/serach_bar_updates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_updates"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+
+        android:background="@drawable/search_view"
+        android:backgroundTint="@color/backgroundsetter"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Updates Here..." />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomnav_updates"
+        android:layout_below="@id/serach_bar_updates"
+      >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<!--           <SearchView-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--                android:id="@+id/searchview_updates"-->
+<!--               android:queryHint="Search Updates......."-->
+<!--               android:iconifiedByDefault="false"-->
+<!--               />-->
+
+
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@android:color/darker_gray"
+            android:scrollbarSize="3dp"
+            android:id="@+id/recycler_updates"
+            />
+        </LinearLayout>
+</FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_up"
+        android:id="@+id/bottomnav_updates"
+        app:labelVisibilityMode="labeled"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomnav_updates"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/floating_add_btn"
+       android:src="@drawable/baseline_add_24"
+
+        />
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:id="@+id/progress_updates"
+    android:layout_centerInParent="true"/>
+</RelativeLayout>

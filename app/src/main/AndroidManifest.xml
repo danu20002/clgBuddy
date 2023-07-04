@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Chatbot"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ultra_welcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".welcome"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".Activities.privacy_policy"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Help"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.account_settings"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.settings"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.updates_taker"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Updates"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.sems_selector"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.civil"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.Mechanical"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.Electrical"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.Electronics"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.Information"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.computer"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.Bsc_honers"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Departments.Aeronautical"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Notes"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.chatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.mainscreen"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.imagesetup"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.forgotpassword"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.verify_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Login_activity"
+            android:exported="false"></activity>
+    </application>
+
+</manifest>

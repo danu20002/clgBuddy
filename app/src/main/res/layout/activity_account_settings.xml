@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+     android:background="@color/backgroundsetter"
+    tools:context=".Activities.account_settings">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_edit">
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="15dp"
+                  >
+                  <ImageView
+                      android:layout_width="40dp"
+                      android:layout_height="60dp"
+                      android:src="@drawable/baseline_arrow_back_24"
+                      android:paddingLeft="10dp"
+                     android:id="@+id/back_settings_img"/>
+                  <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Your Profile"
+                  android:textAlignment="center"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  android:id="@+id/profile_text"
+
+
+                  android:textSize="40sp"/>
+              </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ironman"
+
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+
+
+                    android:clickable="false"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:drawableRight="@drawable/baseline_email_24"
+                       android:focusable="false"
+                        android:cursorVisible="false"
+                        android:singleLine="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="false"
+                        android:id="@+id/profile_email"
+                        android:inputType="textEmailAddress"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:drawableRight="@drawable/baseline_person_24"
+                        android:singleLine="true"
+                        android:layout_margin="15dp"
+                        android:inputType="textPersonName|textCapSentences|textAutoCorrect"
+                        android:id="@+id/profile_name"
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Number"
+
+                        android:drawableRight="@drawable/baseline_local_phone_24"
+                        android:layout_margin="15dp"
+                        android:inputType="number|numberSigned"
+                        android:maxLength="10"
+                        android:id="@+id/profile_phone_number"
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+
+                    android:background="@drawable/buttons_background"
+                    android:id="@+id/profile_update_btn"
+                    android:text="Update data"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+
+                    android:textStyle="bold"
+                    />
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Update Password"
+                     android:textAlignment="textEnd"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     android:layout_marginBottom="15dp"
+                     android:textColor="#0825C8"
+                     android:paddingRight="27dp"
+                     android:id="@+id/update_password"/>
+
+            </LinearLayout>
+            </ScrollView>
+
+    </ScrollView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/profile_updates"/>
+</RelativeLayout>
