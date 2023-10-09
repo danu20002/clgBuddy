@@ -4,6 +4,9 @@ public class materials {
     int id;
     String pdfname;
 
+    public materials() {
+    }
+
     public String getPdfurl() {
         return pdfurl;
     }

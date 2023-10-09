@@ -260,7 +260,7 @@ FirebaseDatabase database;
                 Toast.makeText(getApplicationContext(),"ok new features discarded",Toast.LENGTH_LONG).show();
             }
         }).show();
-        dialog.setCancelable(true);
+
     }
 
     private int getCurrentVersioncode(){
