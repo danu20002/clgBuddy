@@ -60,7 +60,7 @@
                    <com.google.android.material.textfield.TextInputEditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:hint="Email(.edu)"
+                       android:hint="Email"
                        android:drawableRight="@drawable/baseline_email_24"
                        android:textStyle="bold"
                        android:inputType="textEmailAddress"
