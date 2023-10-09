@@ -1,10 +1,5 @@
 package com.daneshnaik.chatbot.Activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,14 +11,12 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.daneshnaik.chatbot.Activities.Departments.Aeronautical;
-import com.daneshnaik.chatbot.Activities.Departments.Bsc_honers;
-import com.daneshnaik.chatbot.Activities.Departments.Electrical;
-import com.daneshnaik.chatbot.Activities.Departments.Electronics;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.daneshnaik.chatbot.Activities.Departments.Information;
-import com.daneshnaik.chatbot.Activities.Departments.Mechanical;
-import com.daneshnaik.chatbot.Activities.Departments.civil;
-import com.daneshnaik.chatbot.Activities.Departments.computer;
 import com.daneshnaik.chatbot.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -46,44 +39,44 @@ scrollView=findViewById(R.id.scrollview_notes);
         scrollView.setAnimation(animation1);
 
 
-        aero_view=findViewById(R.id.aptitude);
-        aero_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-             startActivity(new Intent(getApplicationContext(),Aeronautical.class));
-             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            }
-        });
-
-        bsc_view=findViewById(R.id.os);
-        bsc_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Bsc_honers.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            }
-        });
-
-
-
-        computer_view=findViewById(R.id.dsa);
-        computer_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), computer.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            }
-        });
-
-
-        civil_view=findViewById(R.id.computer_networks);
-        civil_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), civil.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            }
-        });
+//        aero_view=findViewById(R.id.aptitude);
+//        aero_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//             startActivity(new Intent(getApplicationContext(),Aeronautical.class));
+//             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//            }
+//        });
+//
+//        bsc_view=findViewById(R.id.os);
+//        bsc_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), Bsc_honers.class));
+//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//            }
+//        });
+//
+//
+//
+//        computer_view=findViewById(R.id.dsa);
+//        computer_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), computer.class));
+//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//            }
+//        });
+//
+//
+//        civil_view=findViewById(R.id.computer_networks);
+//        civil_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), civil.class));
+//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//            }
+//        });
 
 
 //        electrical_view=findViewById(R.id.eee);
