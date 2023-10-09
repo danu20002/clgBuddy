@@ -1,20 +1,16 @@
 package com.daneshnaik.chatbot.Activities;
 
 
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.AppCompatButton;
-
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.daneshnaik.chatbot.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,8 +19,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.regex.Pattern;
 
 
 public class verify_activity extends AppCompatActivity {
@@ -54,8 +48,8 @@ public class verify_activity extends AppCompatActivity {
                 String email_reg=email_register.getEditableText().toString().trim();
                 String password_reg=password_register.getEditableText().toString().trim();
 
-
-                if(!email_reg.isEmpty()  && Pattern.matches("2gi20is011@students\\.git\\.edu",email_reg)){
+//&& Pattern.matches("2gi20is011@students\\.git\\.edu",email_reg)
+                if(!email_reg.isEmpty()){
                     if(!password_reg.isEmpty() ){
                         progress_reg.setVisibility(View.VISIBLE);
                          auth.createUserWithEmailAndPassword(email_reg,password_reg).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
